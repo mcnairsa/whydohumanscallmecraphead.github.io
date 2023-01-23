@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>CSS Selectors and Visual Rules</h1>
+      <nav>
+		    <h2>Navigation</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <h3>Exercises</h3>
+    		  <ol>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#content-box">Content-Box</a></li>
+				<li><a href="#border-box">Border-Box</a></li>
+				<li><a href="#new-box">The New Box Model</a></li>
+				<li><a href="#review">Review</a></li>
+          </ol>
+				  </li>
+              </ol>
+          </li>
+      </ul>
+     </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Exercises</h2>
+        <article>
+          <h3 id="introduction">1 of 5 Introduction</h3>
+            <p>
+          The standard box model is <em>additive</em>. The padding, border and margins <em>increase</em> the size of the element's box. This can cause problems if the page starts to get busy. Also, because height and width don't mean what they say or appear to mean, we have to take all the values (not just the values for height and width) into account when working out how much elements will add up to on the page.
+            </p>
+          <h3 id="content-box">2 of 5 Content-Box</h3>
+            <p>
+        ... is the default box model.
+            </p>
+          <h3 id="border-box">3 of 5 Border-Box</h3>
+            <p>
+          ... is an alternative model. You specify it with the <code>box-sizing</code> property thus:
+            <pre>
+    * {
+        box-sizing: border-box;
+      }
+            </pre>
+		    </p>
+		  <h3 id="new-box">4 of 5 The New Box Model</h3>
+		    <p>
+        Nothing to add here ...
+	    	  </p>
+    	<h3 id="new-box">4 of 5 The New Box Model</h3>
+	    	  <p>
+        Nor here ...
+		    </p>
+<!-- Code Stuff 
+          <p>E.g. the following code
+            <pre>
+    p {
+        color: green;
+      }
+            </pre>
+          will set the text colour for all paragraphs (the <code>&ltp&gt</code> elements in the html) to the colour green. </p>
+                -->
+        </article>
+        <aside>
+			<h2>Aside</h2>
+          <p>
+			... some asid-ey type stuff ...
+			</p> 
+        </aside>
+      </section> 
+      <!--
+      <section id="media">
+		    <figure>
+          <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+          <figcaption>A cute dog (for no reason other than this is a place-holder).</figcaption>
+        </figure>  
+      
+	      <audio controls>
+    	    <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+        </audio> 
+        <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+        </video>
+	      <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+      </section>
+        -->
+    </main>
+    
+    <footer>
+      <p>Contact me at +1 234 567 8910 </p>
+    </footer>
+  </body>
+</html>

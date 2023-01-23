@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>CSS Selectors</h1>
+      <nav>
+		    <h2>Navigation</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <h3>Exercises</h3>
+    		  <ol>
+				<li><a href="#type">Type</a></li>
+				<li><a href="#universal">Universal</a></li>
+				<li><a href="#class">Class</a></li>
+				<li><a href="#multi-class">Multiple Classes</a></li>
+				<li><a href="#id">ID</a></li>
+				<li><a href="#attribute">Attribute</a></li>
+				<li><a href="#pseueo-class">Pseudo-class</a></li>
+				<li><a href="#class-id">Classes and IDs</a></li>
+				<li><a href="#specificity">Specificity</a></li>
+				<li><a href="#chaining">Chaining</a></li>
+				<li><a href="#descendant">Descendant Combinator</a></li>
+				<li><a href="#chaining-specificity">Chaining and Specificity</a></li>
+				<li><a href="#multiple-selectors">Multiple Selectors</a></li>
+				<li><a href="#review">Review</a></li>
+          </ol>
+				  </li>
+              </ol>
+          </li>
+      </ul>
+     </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Exercises</h2>
+        <article>
+          <h3 id="type">1 of 14 Type</h3>
+          <p>
+          Aka <em>tag name</em> or <em>element</em> selector since they correspond to html elements.
+          </p>
+		  <p>E.g. the following code
+			<pre>
+    p {
+      color: green;
+    }
+	    	</pre>
+		will set the text colour for all paragraphs (the <code>&ltp&gt</code> elements in the html) to the colour green. </p>
+		<h3 id="universal">2 of 14 Universal</h3>
+        <p>
+			The universal selector '*' selects <em>all</em> elements on a page. E.g.
+    	  <pre>
+    * { 
+      font-family: Verdana;
+    }
+          </pre>	
+		</p>
+		<h3 id="class">3 of 14 Class</h3>
+		<p>The class selector targets a class attribute in the html and selects all elements that have that class attribute. In the css it is declared by prepending the class name with a full stop. E.g.
+      <pre>
+    .title {
+        color; teal:
+    }
+    </pre>
+	    </p>
+		<h3 id="multi-class">4 of 14 Multiple Classes</h3>
+      <p>
+			Class selectors can be combined in the html to create combinations of effects.
+		  E.g.
+      </p>
+    	<pre>	
+    &lth1 class='title uppercase'&gtTop Vacation Spots&lt&#47h1&gt
+	  
+    .title {
+        color: green;
+    }
+	
+	.uppercase {
+		text-transform: uppercase;
+	}
+    </pre>	
+    <h3 id="id">5 of 14 ID</h3>
+    <p>
+    Html elements can have an id that is unique to that node in document. In the css the id is selected by prepending the id name with a'#'. E.g.
+    </p>
+    <pre>
+  &lth1 id="article-title"&gtTitular Article&lt&#47h1&gt
+
+  #article-title {
+    font-family: cursive;
+  }
+    </pre>	
+  
+    <h3 id="attribute">6 of 14 Attribute</h3>
+      <p>
+			<em>Attributes</em> of an <em>element</em> can be styled. A whole set of wildcard characters can be used to select aspects of the attribute. E.g.
+    	</p>
+      <pre>
+    &lta href="#attribute"&gtAttribute&lt&#47a&gt
+
+    a[href*='attribute'] {
+      color: lightgreen;
+    }
+      </pre>	
+      <p>Also '~', '^' and a whole bunch of stuff. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax" >MDN reference</a> for full details of use of selectors on attributes.</p>
+    <h3 id="pseudo-class">7 of 14 Attribute</h3>
+      <p>
+			A<em>pseudo-class</em> is used to change syles based on user actions. E.g., a greyed out Submit button that becomes active when all fields in a form have been filled out. Pseudo-classes include: :hover, :visited, :disabled, :active and many more. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" >the MDN Pseudo-classes reference</a> for full details..
+    	</p>
+      <pre>
+    a:hover {
+      color: darkorange;
+    }
+      </pre>	
+      <p></p>
+    <h3 id="class-id">8 of 14 Classes and IDs</h3>
+      <p>
+			Classes are multi-use so a <em>class ruleset</em> can be used to syles multiple elements. Id's are single-use so <em>id rulesets</em> are used to style a single element.
+    	</p>
+    <h3 id="specificity">9 of 14  Specificity</h3>
+      <p>
+        Specificity refers to the relative weight given to css selectors. The more specific selector will override the less specific. E.g. a class selector will override a type selector but be overridden by an id selector.
+      </p>
+    </article>
+    <h3 id="chaining">10 of 14 Chaining</h3>
+      <p>
+			<em>Chaining</em> is linking two or more selectors. Only those elements that to which all selectors apply will be selected. E.g., the following css will set only <code>&lth1&gt</code> elements with a class of <code>special</code> to 69% of the normal font size for the current document. Other  <code>&lth1&gt</code> elements and other elements with a class of  <code>special</code> will not be styled by this rule. The chained selectors have no space or other character between them.</p>
+      <pre>
+      h1.special {
+        font-size: 69%; 
+      }
+      </pre>	
+      <p></p>
+      <h3 id="descendant">11 of 14 Descendant Combinator</h3>
+      <p>
+			<em>Descendant combinator</em> selectors are created linking two or more selectors with a space in between. This allows the developer to fine tune the specificity of selectors. Given the following html</p>
+      <pre>
+    &ltul class='main-list'&gt`
+      &ltli&gt ... &gt&#47li&gt
+      &ltli&gt ... &gt&#47li&gt
+    &lt&#47ul&gt
+      </pre>
+      ... we can specify that the <code>&ltli&gt</code> elements will be styled with the following rule:
+      <pre>
+    .main-list li {
+        color: purple; 
+      }
+      </pre>	
+      <p></p>
+      <h3 id="chaining-specificity">12 of 14 Chaining and Specificity</h3>
+      <p>
+			Chaining selectors leads to greater specificity. An element that is covered by one of the parts of the chained ruleset but not the other(s) will not be styled by the unchained, and therefore less specific, rule.</p>
+
+      <h3 id="multiple-selectors">13 of 14 Multiple Selectors</h3>
+      <p>
+			The following code will style both <code>&lth5&gt</code> and <code>&ltli&gt</code> the same without the need for separate rule for each.
+      <pre>
+      li {
+        font-family: monospace;
+      }
+      </pre>	
+      <p></p>
+    <h3 id="review">14 of 14 Review and Quiz Feedback</h3>
+      <p>
+			Note the following code will not work. The <code>&ltp&gt</code> element will not display. The style element must contain the css that will be applied to html elements and not html elements themselves.
+        <pre>
+    &lthead&gt
+      &ltstyle&gt
+        &ltp style="color:red;"&gtI'm learning to code!&lt&#47p&gt  
+      &ltstyle&gt
+    &lt&#47head&gt      
+        </pre>
+      Alternatively, the html element can be styled directly but this is not recommended. See above for how to do it if you really must.   
+      </p>
+        </aside>
+      </section> 
+      <aside>
+        <h2>Aside</h2>
+            <p>
+        ... some asid-ey type stuff ...
+        </p> 
+        <!--
+      <section id="media">
+		    <figure>
+          <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+          <figcaption>A cute dog (for no reason other than this is a place-holder).</figcaption>
+        </figure>  
+      
+	      <audio controls>
+    	    <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+        </audio> 
+        <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+        </video>
+	      <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+      </section>
+        -->
+    </main>
+    
+    <footer>
+      <p>Contact me at +1 234 567 8910 </p>
+    </footer>
+  </body>
+</html>

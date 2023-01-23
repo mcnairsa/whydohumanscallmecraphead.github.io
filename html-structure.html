@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- 1/14 Preparing for HTML
+    The document type declaration or doctype tells the browser what kind of document we are presenting and what version i.e what standards to use -->
+<!-- See here:
+https://discuss.codecademy.com/t/why-is-doctype-uppercase-but-html-lower/471818 
+for an explanation of the use of u.c. and l.c. in the document type declaration -->
+
+<!-- 2/14 The <html> tag
+    Anything between <html> and </html> will be interpreted by the browser as html and 'rendered' i.e. displayed in a browser window -->
+<html>
+<!-- 3/14 The Head
+    Contains metadata or information about the page but not any page content -->    
+    <head> 
+        <title>Another Page About HTML Pages</title> 
+<!-- 4/14 The title & 5/14 Where Does the Title Appear?
+    The title appears in the browser tab
+    see https://content.codecademy.com/courses/updated_images/htmlcss1-diagram__sitetitle_Updated_1.svg -->
+    </head>
+    <body>
+<!-- 6/14 Linking to Other Web Pages
+    Links put the HT in html
+    We make links with an anchor element <a> ... </a> 
+    the href in an anchor element identifies the path or address of the file linked to
+    This can be the URL of a resource on the internet or a local file, i.e. a file on the same computer as the current page.
+    For example: -->
+    <h1 id="resources">Resources for learning HTML</h1>
+    <p>Learn more about building web pages
+        <ul>    
+            <li><a href="https://www.w3schools.com/"> Another great place to learn to code. (Use the browser back button to get back to the main page.)</a></li>
+<!-- 7/14 Opening Links in a New Window
+    use the target attribute -->
+            <li><a href="https://www.freecodecamp.org/" target="_blank">And here's another option but this will open in a new window (or tab depending you your browser's settings).</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"> HTML elements reference in Mozilla documentation </a></li>
+        </ul>    
+        </p>
+<!-- 8/14 Linking to Relative Page
+    A relative path is relative to the current file; e.g.:
+    ./index.htm (where './' means that the resource is in the same directory [folder] as the current page.)
+    An absolute path contins the full details of how to access the required document, either a URL or a path starting with the root of the computer; e.g.:
+    https://www.codecademy.com/learn/learn-html -->    
+<!-- 9/14 Linking at Will 
+    Other resources such images can be made into links by embedding, e.g. an img element into the anchor element.
+    -->    
+<!-- 1-/14 Linking to Same Page 
+    We can jump around in the current page by using an id on our page as the target for an anchor element. 
+    -->
+    <a href="#resources">Here are some (internal) links to more places to learn about building web pages.</a>
+<!-- 11/14 Whitespace 
+    ... in the html source file is ignored by the browser when rendering the document. -->
+<!-- 12/14 Indentation
+    Two spaces is the current (as or 20-12-2022) standard recommended by the W3C (World Wide Web Consortium).
+    Note: this file uses tabs instead, Bad Sam!
+    -->    
+<!-- 13/14 Comments
+    We LOVE comments! -->
+<!-- 14/14 HTML tags
+    Full list of tags is inclueded in the resources ... -->    
+    </body>
+</html>

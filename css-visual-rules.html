@@ -1,0 +1,168 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>CSS Selectors and Visual Rules</h1>
+      <nav>
+		    <h2>Navigation</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <h3>Exercises</h3>
+    		  <ol>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#font-family">Font Family</a></li>
+				<li><a href="#font-size">Font Size</a></li>
+				<li><a href="#font-weight">Font Weight</a></li>
+				<li><a href="#text-align">Text Align</a></li>
+				<li><a href="#colors">Color (sic) and Background Color (sic)</a></li>
+				<li><a href="#opacity">Opacity</a></li>
+				<li><a href="#background-image">Background Image</a></li>
+				<li><a href="#important">Important</a></li>
+				<li><a href="#review">Review</a></li>
+          </ol>
+				  </li>
+              </ol>
+          </li>
+      </ul>
+     </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Exercises</h2>
+        <article>
+          <h3 id="introduction">1 of 10 Introduction</h3>
+            <p>
+          Yeah, there's a bucket load of stuff ...
+		  Note that later lessons go into all this in more detail. This lesson is pretty much just an overview.
+            </p>
+          <h3 id="font-family">2 of 10 Font Family</h3>
+            <p>
+          A font-family is a group of related fonts. You set the font family for the <code>&ltp&gt</code> elements like this:
+<!-- Code Stuff -->
+            <pre>
+    p {
+	  font-family: Georgia;
+      }
+            </pre>
+    	There's a bunch of font stuff on Dan's Tools. <a href="https://www.cssfontstack.com/"> Enjoy!</a>
+
+	      </p>
+          <h3 id="font-size">3 of 10 Font Size</h3>
+            <p>
+        <!-- Code Stuff -->
+        One way to set the size of the text is by pixels (originally pixel was shorthand for 'picture cell').
+            <pre>
+    p {
+	  font-size: 18px;
+      }
+            </pre>
+		Will set the text size to 18 pixels. Note that pixel is a <em>absolute</em> size. There are better ways to play with the size of your text.
+	      </p>
+		  <h3 id="font-weight">4 of 10 Font Weight</h3>
+            <p>
+		Weight means how light or dark the text is. Like making it <strong>bold</strong> but with much more fine-grained control. E.g.:
+	  <!-- Code Stuff -->
+		  <pre>
+  * {
+	font-weight: bold;
+	}
+		  </pre>
+	  ... will make everything <strong>bold</strong>. To set certain parts back you can use the value of <code>normal</code> instead of <code>bold</code>. Again see later lessons for how to really have fun with font weights.
+		</p>
+	  <h3 id="text-align">5 of 10 Text Align</h3>
+		<p>
+	<!-- Code Stuff -->
+	Text can be aligned to the left, centre, right and all manner of lovely positions. (As usual see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align" target="blank">MDN</a> for details).
+		<pre>
+p {
+  text-align: center;
+  }
+		</pre>
+	Will center the text of all <code>&ltp&gt</code> elements on the page.
+	  </p>
+	  <h3 id="colors">6 of 10 Color and Background Color</h3>
+		<p>
+	<!-- Code Stuff -->
+	The colour of foreground (i.e. text++) and background are set independently.
+	  <pre>
+.caption {
+    background-color: white;
+    color: black;
+  }	</pre>
+	Note: it's not a good idea to set the background of your text editor to the same as the text colour.
+	  </p>
+	  <h3 id="opacity">7 of 10 Opacity</h3>
+		<p>
+	<!-- Code Stuff -->
+	Opacity is a measure of how visible something is. If it is fully opaque it's solid. The opposite is transparent. Values for the <code>opacity</code> property range from <code>0</code> (transpaent or invisible) to  <code>1</code> for  100% <code>opacity</code>. A value in between will allow an over-lapped element, an image for example, to be partly visible.
+	  <pre>
+.caption {
+	background-color: white;
+	color: black;
+	opacity: 0.75;
+  }
+	  </pre>
+	... gives a much pleasanter viewing experience, don't you think?
+	  </p>
+	  <h3 id="background-image">8 of 10 Background Image</h3>
+		<p>
+	<!-- Code Stuff -->
+	We can use an image as a background thus:
+	  <pre>
+.main-banner {
+    background-image: url('images/mountains.jpg');
+  }
+      </pre>
+	The path can be <em>absolute</em> if it is an external file or <em>relative</em> if the file is local to the html file.
+	  </p>
+	  <h3 id="important">9 of 10 Important</h3>
+		<p>
+	<!-- Code Stuff -->
+	A declaration, i.e. one part of a ruleset, can be marked as <code>!important</code> which will tend to override any other rules or declarations. Remember though, that there are always several style sheets in operation. Generally, the ... is regarded as a Very Bad Thing. It can usefully be used though in a <em>user style sheet</em>, perhaps for accessibility. See the MDN <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/important" target="blank"><code>!important</code></a>  page for more info.
+	  </p>
+
+	  <h3 id="review">10 of 10 Review</h3>
+		<p>
+	There's a 20 minute YouTube video that covers all this stuff <a href="https://www.youtube.com/watch?v=InA5Ff7mxrc" target="blank">here</a>.
+        </p>
+
+	  </p>
+	</article>
+        <aside>
+			<h2>Aside</h2>
+          <p>
+			... some asid-ey type stuff ...
+			</p> 
+        </aside>
+      </section> 
+      <!--
+      <section id="media">
+		    <figure>
+          <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+          <figcaption>A cute dog (for no reason other than this is a place-holder).</figcaption>
+        </figure>  
+      
+	      <audio controls>
+    	    <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+        </audio> 
+        <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+        </video>
+	      <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+      </section>
+        -->
+    </main>
+    
+    <footer>
+      <p>Contact me at +1 234 567 8910 </p>
+    </footer>
+  </body>
+</html>

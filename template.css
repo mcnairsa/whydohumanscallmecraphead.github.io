@@ -1,0 +1,5 @@
+/*
+Considered good practice to t	have a reset.css sheet [ac2 Alexis in Cc video 'Tje Box Model in DevTools'.
+The reset.css sheet overrides some core user agent rules to give the developer a useful and known/predictable baseline/starting point.
+*/
+* {box-sizing: border-box;

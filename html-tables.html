@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Displaying Tabular Data</title>
+    </head>
+    <body>
+<!-- 1/13 Introduction to Tables 
+  Using the <table> ... </table> element and its child elements -->
+  <table>
+<!-- 2/13 Create a Table
+  A table consists of at least one row and one column.
+  That would be a single-cell table which wouldn't hold much data. We'll get more useful very soon. -->
+<!-- 3/13 Table Rows
+  In which we add two (empty) rows to our newly created table WhooHoo! -->
+<!-- 4/13 Table Data
+  Cells are the smallest unit of a table and each contain one datum (sic) 
+  Cells are added to a table with the <td></td> element -->
+<!-- 5/13 Table Headings
+  Headings define what each column or row contains 
+  Must be w/in a table row 
+  The scope attribute defines what each table header refers to see MDN docs <th> entry for full list. See also 7/13 below. -->
+<!-- 6/13 Table Borders 
+  DON'T do it here! Use CSS for any styling. -->
+<!-- 7/13 Spanning Columns 
+  like this:
+  <tr>
+    <td colspan="2">Greedy Cell</td>
+  </tr> -->
+<!-- Spanning Rows
+  like this:
+  <tr>
+    <td rowspan="2">Greedy Cell</td>
+  </tr> -->
+<!-- 9/13 Table Body 
+  Along with <thead> and <tfoot> provides semantic indication that assists in printing or screen reading. -->
+<!-- 10/13 Table Head
+  A special <tr> for the headings. If printing the table will this put the headers/-ings at the top of each page?
+  Note: only column headings -->
+<!-- 11/13 Table Foot
+  Useful for totals and summary data.
+  -->
+<!-- 12/13 Styling with CSS
+  I question the wisdom of venturing into CSS in this way. -->
+<!-- 13/13 Review
+  Whatever ... -->
+    <tr></tr>
+<tr><td>Adam's Greenworks</td><td>14</td><td>Package Items</td></tr>
+</table>
+  </body>
+</html>

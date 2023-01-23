@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Semantic HTML</title>
+  </head>
+  <body>
+<!-- 1/9 Introduction to Semantic HTML
+  When elements are *semantic* the name of the element indicates its purpose and therefore the *meaning* it has within the structure of the document.
+    See here https://dev.to/kenbellows/stop-using-so-many-divs-an-intro-to-semantic-html-3i9i for a fuller explanation. 
+    -->
+<!-- 2/9 Header and Nav
+  For example...
+    a <header> element indicates that it contains headings for a web page
+	a <nav> element contains the navigation within the current document and between documents.
+	This makes it easier to understand the structure of the document.
+	Screen readers rely heavily on the semantics of a document to know what to include and in what order to present the content to the user.
+  Previouly the practice was to code such stuff as <div class="navigation" which screen readers can't make use of.
+    -->
+<!-- 3/9 Main and Footer
+	<main> ... </main> is for the main content of the page
+	<footer> ... </footer> is for stuff like contact info, site map and copyright.
+    -->
+<!-- 4/9 Article and Section 
+  These are not so easy to grok.
+	The general idea is that an <article> element 'holds information that makes sense on its own.'
+    This is what the Cc documentation/cheatsheet says:
+	  The <article> semantic tag represents a part of a page which is self-contained and could be published elsewhere. Some common uses include blog posts or magazine articles.
+      An article may be split into <sections> if that makes sense in the context.
+	A <section> contains any content that it makes sense to put together but which doesn't have an element that conveniently groups it together.
+    -->
+<!-- 5/9 The Aside Element
+  If using the <aside> in conjunciton with an <article), for example: '... the information within the <article> is the important content. Meanwhile the information within the <aside> enhances the information in <article> but is not required in order to understand it.'
+    -->
+<!-- 6/9 Figure and Figcaption
+  Why would you want to use <figure> &c instead of simply adding, e.g., an <img> to your content?
+  Here's a clue:
+    While the content in <figure> is related to the main flow of the document, its position is independent. This means that you can remove it or move it somewhere else without affecting the flow of the document.
+    Figure and figcaption together are more 'semantic' than just an <img> on its own, right?
+    -->
+<!-- 7/9 Audio
+  Allows for an *embedded* audio player in a web page. 
+    The *controls* attribute displays the play and mute buttons.
+    Note: as with *video* you have the option of an src attribute to the audio element or using one or more child <source> elements within the <audio> element.
+    See also here:
+    https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+    for the separate <source> element and loads of stuff around video and audio
+-->
+<!-- 8/9 Video and Embed
+  <video> behaves the same as <audio>. Again see MDN for *loads* of info on this.
+Note: <embed> is deprecated in favour of <audio>, <img> & <video> 
+  -->
+
+<!-- 9/9 Review
+  -->
+
+</body>
+  </html>

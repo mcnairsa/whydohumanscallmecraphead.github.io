@@ -1,0 +1,40 @@
+VSCode and Git? see here:
+https://code.visualstudio.com/docs/sourcecontrol/overview
+
+FSE 3. Fundamentals of HTML - Introduction to HTML
+    HTML stands for ...
+    HTML anatomy
+    https://content.codecademy.com/courses/learn-html/elements-and-structure/html%20lesson%20image.svg
+    Elements consist of an opening tag, content and optionally a closing tag.
+    The body elemnent <body> ... </body>
+    Only content between the opening and closing body tags is displayed by the browser.
+
+    HTML Structure
+        An HTML document is a tree with the document as the ultimate parent. All elements below are considered children, grand-, great-grand children &c. E.g. a paragraph within a div may the grandcild of the body which is in turn a child of the document. the div is parent to the paragraph and grandparent to eny element nested within the paragraph.
+
+    Headings
+        <h1> ... </h1> highest ie largest print, most prominent &c <h6> ... </h6> lowest level of headings.
+
+    Divs, or not . See here:
+        https://dev.to/kenbellows/stop-using-so-many-divs-an-intro-to-semantic-html-3i9i
+
+ Dispalying Text (8/16)
+    <p> for blocks of plain text & <span> for inline text. Note: not clear in the lesson but <span> is most used for applying styles or other attributes to small chumks of text.
+
+Images (13/16)
+    src is a required attribute (there may be other attributes that are not required)
+    The src is the location or place on the web or on your computer where the browser will go to find the image or 'resource'.
+Self-closing tags
+
+    <br> or <br />, <img ... > or <img />
+
+Image Alts (14/16)
+        Describes the image. If the user hovers over the image the alt will be displayed. Also used by screen readers, typically used by the visually impaired, and in SEO (q.v.).
+
+Video (15/16)
+    See 'Semantic HTML 7/9 and 8/9
+    See also here:
+    https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+    for the separate <source> element and loads of stuff around video and audio
+
+Review

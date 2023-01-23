@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- html boilerplate code for investigation later
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+-->
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>CSS Display and Positioning</h1>
+      <nav>
+		    <h2>Navigation</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <h3>Exercises</h3>
+    		  <ol>
+				<li><a href="#position">Position</a></li>
+				<li><a href="#display">Display</a></li>
+				<li><a href="#z-index"><code>z-index</code></a></li>
+				<li><a href="#float">Float</a></li>
+				<li><a href="#clear">Clear</a></li>
+              </ol>
+			</li>
+              </ol>
+          </li>
+      </ul>
+     </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Exercises</h2>
+        <article>
+          <h3 id="position">Position</h3>
+            <p>
+          The available values for the <code>position</code> property of an html element include:
+		      <ul>
+				<li><code>static</code>, the default value</li>
+				<li><code>relative</code> '... to its default position on the web page'. The <em>offset</em> properties <code>top, bottom, left</code> and <code>right</code> determine which way the element will move and by how much. They can be specified in pixels, as a percentage of the relevant dimension of the page or by other measures.</li>
+				<li><code>absolute</code> takes the element out of the flow of the document so it is ignored by other elements. Its position is determined <em>'relative to its closest positioned parent element'</em>. Offset properties 'determine the final position'. With <code>absolute</code> positioning the element will still scroll with the rest of the document.</li>
+				<li><code>fixed</code> positioning <em>fixes</em> the element on the page so that it stays put regardless of user scrolling. We use the offset properties to control where on the page it is fixed.</li>
+				<li>A <code>sticky</code> elements stay where they are while the user scrolls until the scrolling puts it at the bottom of the page then it 'rejoins' the rest of the content and scrolls normally. What position on the page it is stuck to is controlled by the offset properties.</li>
+			  </ul>
+            </p>
+          <h3 id="display">Display</h3>
+            <p>The <code>display</code> property of an element controls whether it can exist on the same line as another or whether it will default to taking up a line all to itself. The possible values of <code>display</code> are:
+              <ul>
+                <li><code>inline</code> which typically puts the element in the normal flow of text. Elements such as <code>&ltem&gt</code> that affect the look of a piece of text or elements such as anchors (<code>&lta&gt</code>) and <code>&ltspan&gt</code> fit in along with the content in their container. <code>inline</code> elements have their <code>width</code> and <code>height</code> properties determined by their container and these properties cannot be adjusted in css. If an element such as a heading (<code>&lth1&gt</code> &c) or <code>&ltp&gt</code> have their <code>display</code> property set to a value of <code>inline</code> they will lose their normal behaviour of inserting newlines between themselves and any text or other content before or after them.</li>
+                <li><code>block</code><em>-level</em> elements work the other way round. They default to taking up the width of the page. Their <code>height</code> is set by to what they necessary. Both the <code>height</code> and <code> width</code> properties of a <code>block</code>-level element can be set in css.</li>
+                <li><code>inine-block</code> elements have the best of both worlds. They can appear on the same line as other elements <em>and</em> have their <code>height</code> and <code>width</code> set in css.</li>
+			  </ul>
+            </p>
+          <h3 id="z-index"><code>z-index</code></h3>
+            <p>
+              Whether and how elements overlap is controlled by the <code>z-index</code> property. <code>z-index</code> does not work on  <code>static</code> elements and has a default value of 0. Changing the default  <code>z-index</code> value to an integer greater than 0 will raise that element's priority in the order of visibility. The priority of multiple elements is set by increasing the  <code>z-index</code>.
+			  
+            </p>
+          <h3 id="float">Float</h3>
+            <p>
+              <code>float</code> positions an element within its container. It is 'commony used to wrap text around images.' <em>Flexbox</em> and <em> Grid</em> can be used to get much greater control over the horizontal positioning of elements relative to each other. Typical values of <code>float</code> are <code>left</code> and <code>right</code>.
+            </p>
+          <h3 id="clear">Clear</h3>
+            <p>
+				<code>clear</code> makes sure that elements do not bump into each other. Possible vlaues for <code>clear</code> are:
+				<ul>
+					<li><code>left</code></li>
+					<li><code>right</code></li>
+					<li><code>both</code></li>
+					<li><code>none</code></li>
+				</ul>
+            </p>
+
+<!-- Code Stuff 
+          <p>E.g. the following code
+            <pre>
+    p {
+        color: green;
+      }
+            </pre>
+          will set the text colour for all paragraphs (the <code>&ltp&gt</code> elements in the html) to the colour green. </p>
+                -->
+        </article>
+        <aside>
+			<h2>Aside</h2>
+          <p>
+			... some asid-ey type stuff ...
+			</p> 
+        </aside>
+      </section> 
+      <!--
+      <section id="media">
+		    <figure>
+          <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+          <figcaption>A cute dog (for no reason other than this is a place-holder).</figcaption>
+        </figure>  
+      
+	      <audio controls>
+    	    <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+        </audio> 
+        <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+        </video>
+	      <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+      </section>
+        -->
+    </main>
+    
+    <footer>
+      <p>Contact me at +1 234 567 8910 </p>
+    </footer>
+  </body>
+</html>

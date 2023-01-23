@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>CSS Selectors and Visual Rules</h1>
+      <nav>
+		    <h2>Navigation</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <h3>Exercises</h3>
+    		  <ol>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#box-model">The Box Model</a></li>
+				<li><a href="#height-width">Height and Width</a></li>
+				<li><a href="#borders">Borders</a></li>
+				<li><a href="#border-radius">Border Radius</a></li>
+				<li><a href="#padding">Padding</a></li>
+				<li><a href="#padding-shorthand">Padding Shorthand</a></li>
+				<li><a href="#margin">Margin</a></li>
+				<li><a href="#margin-shorthand">Margin Shorthand</a></li>
+				<li><a href="#auto">Auto</a></li>
+				<li><a href="#margin-collapse">Margin Collapse</a></li>
+				<li><a href="#min-max-height-width">Minimum and Maximum Height and Width</a></li>
+				<li><a href="#overflow">Overflow</a></li>
+				<li><a href="#resetting">Resetting Defaults</a></li>
+				<li><a href="#visibility">Visibility</a></li>
+				<li><a href="#review">Review</a></li>
+          </ol>
+				  </li>
+              </ol>
+          </li>
+      </ul>
+     </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Exercises</h2>
+        <article>
+          <h3 id="introduction">1 of 16 Introduction</h3>
+            <p>
+          Every html element lives in a box. Knowing how to control the differernt parts of the box is a big part of styling elements. It gives control over borders and the spacing between elements.
+            </p>
+          <h3 id="box-model">2 of 16 The Box Model</h3>
+            <p>
+              The box consists of layers like a series of concentric boxes. The outer layer is the surrounding <code>margin</code> between elements. Within that is a <code>border</code> then padding between the <code>border</code> and the element and the inner <code>content</code> box.</p>
+            <p>
+              The <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box" target="blank">MDN</a> article 'The box model' has a diagram of the parts of a box. See the rest of the article for a real in-depth view.
+            </p>
+          <h3 id="height-width">3 of 16 Height and Width</h3>
+            <p>
+              An element's default height and width is whatever is needed for the content. This can be overridden with the css <code>height</code> and <code>width</code> properties.
+              </p>
+              <p>
+                Pixels are an <em>absolute </em>measure of height and width dependent only on the properties of the display device. The element will appear the same size (in pixels) no matter what device it is viewed on.
+              </p>
+              <p>E.g. the following code
+                <pre>
+        #logo {
+            height: 30px;
+            width: 30px;
+          }
+                </pre>
+              will set the size of the element with an id of <code>logo</code> (usually an image) to be 30 pixels high and 30 pixels wide on any device. </p>
+    
+          <h3 id="borders">4 of 16 Borders</h3>
+            <p>
+              Every element has a <em>border</em>. The default values for the <code>width</code>, <code>style</code> and <code>color</code> properties (which are also the default <em>values</em> for these properties) will render the border invisible but it is still there. If any or all of these values is unspecified then the default values are applied.
+              <blockquote>
+                The default border is medium none color, where color is the current color of the element. If width, style, or color are not set in the CSS file, the web browser assigns the default value for that property.
+               <em>[Codecademy lesson]</em>
+              </blockquote>
+              E.g. 
+                  <pre>
+        p.content {
+            height: 80px;
+            width: 240px;
+            border: solid red thick;
+          }
+                </pre>
+                or...
+                <pre>
+        p.content {
+            height: 80px;
+            width: 240px;
+            border: solid #fff 2px;
+          }
+                </pre>
+                
+            </p>
+
+          <h3 id="border-radius">5 of 16 Border Radius</h3>
+            <p>
+        The corners of the box may be rounded rather than right-angled. To do this we use the <code>border-radius</code> property. The radius can be set either using <em>pixels</em> or a <em>percentage</em>.
+              <pre>
+          container {
+              height: 80px;
+              width: 240px;
+              border-radius: 5px;
+            }
+              </pre>
+        Will set a <code>border-radius</code> that is the same rounding as a circle 5 pixcels radius.          
+              <pre>
+        container {
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+        }
+      </pre>
+        Will create a perfect circle of 200 pixels radius.
+    </p>
+    <p>
+    Note that we can also set the radius of individual corners. See the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"> MDN</a> documentation for details.
+    </p>
+          <h3 id="padding">6 of 16 Padding</h3>
+            <p>
+        The <code>padding</code> property is used to control the space between the content of the box and the border. We can set the four sides to the same value or set them individually with, e.g. <code>border-top</code>.
+              <blockquote>
+                'The padding property is often used to expand the background color and make the content look less cramped.'
+                (Codecademy) 
+              </blockquote>
+              Note: (from MDN)
+              <blockquote>Note: Padding creates extra space within an element. In contrast, margin creates extra space around an element.</blockquote>
+            </p>
+          <h3 id="padding-shorthand">7 of 16 Padding Shorthand</h3>
+            <p>
+        A <em>shorthand property</em> is used to specify different values for the four sides <em>in one line </em> of code. Thus:
+          <pre>
+        p.content-header {
+          padding: 6px 11px 4px 9px;
+        }
+          </pre>
+            </p>
+          <h3 id="margin">8 of 16 Margin</h3>
+            <p>
+        The <em>margin</em> is the space that separates the element from its neighbors. (MDN) If the margin is the same size all round the box you set the margin like this:
+          <pre>
+    p {
+      border: 1px solid aquamarine;
+      margin: 20px;
+    }
+          </pre>
+          Or you can set the top, sides and bottom values specifically:
+          <pre>
+    p {
+      border: 1px solid aquamarine;
+      margin-top: 10px;
+      margin-right: 5px;
+      margin-bottom: 20px;
+      margin-left: 15px;
+    }
+          </pre>
+
+        </p>
+          <h3 id="margin-shorthand">9 of 16 Margin Shorthand</h3>
+            <p>
+          You don't have to set the four sides on four rows of code. Using <em>margin shorthand</em> you can set them individually in one line. Like this:
+          <pre>
+    p {
+      border: 1px solid aquamarine;
+      margin: 10px 5px 20px 15px;
+    }
+             </pre> 
+      ... which is the same as the previous.
+      <p>Note: the order is always <em>clock-wise starting with the top</em>: top, right, bottom, left.</p>
+      <p><em>Two values</em> sets top and bottom to the first value and uses the second value for the left and right sides. <em>Three values</em> takes the first value for the top, the second for the left and right sides and the third for the bottom. </p>
+            </p>
+          <h3 id="auto">10 of 16 Auto</h3>
+            <p>
+        If a value of <code>auto</code> is given for one of the margin values it is left to the browser to figure it out. This can be used, for example, to centre an element within its container. Specifying <code>auto</code> in a two-value rule will centre the element horizontally.
+            </p>
+            <h3 id="margin-collapse">11 of 16 Margin Collapse</h3>
+            <p>
+        Hmm... Not sure I find the short-person, tall-person simile helpful.
+            </p>
+            <p>
+        Vertical, i.e. left and right margins add together to keep their respective elements apart by the sum of their values. Horizontal (top and bottom) margins do not. Whichever is the greater is taken as the margin between the two elements.
+            </p>
+          <h3 id="min-max-height-width">12 of 16 Minimum and Maximum Height and Width</h3>
+            <p>
+        Minimum and maximum height and width help to make sure content stays viewable across a wide range of different screen sizes. E.g.:
+            <pre>
+    p {
+      color: grey;
+      font-size: 16px;
+      line-height: 48px;
+      margin-top: 60px;
+      padding: 10px 20px;
+      min-width: 200px;
+      max-width: 800px;
+      min-height: 200px;
+      max-height: 300px
+    }
+        </pre>     
+      </p>
+          <h3 id="overflow">13 of 16 Overflow</h3>
+            <p>
+        The <code>overflow</code> property determines what happens when an element is larger than its container. The default value of <code>visible</code> will make the overflowing content always visible. A value of <code>hidden</code> will hide it and <code>scroll</code> will add scroll bars. E.g.:
+            </p>
+                  <pre>
+    p {
+      overflow: scroll; 
+    }          
+              </pre>  
+            <p>
+        Note: the size of content is not always known at the time of coding the page. If text is inserted into a table cell from a database, for example, the amount of text is determined by what is read from the database, not by the programmer.
+      </p>
+          <h3 id="resetting">14 of 16 Resetting Defaults</h3>
+            <p>
+        Browsers generally have a built-in stylesheet known as the user-agent stylesheet. It is common to <em>reset</em> values on the default stylesheet to created a blank slate. The following
+               <pre>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+               </pre>
+               is commonly the first ruleset in a developer-created stylesheet.
+            </p>
+          <h3 id="visibility">15 of 16 Visibility</h3>
+            <p>
+        The <code>visibility</code> property of an element determines whether its content is seen or not. Possible values are: <code>hidden</code>, <code>visible</code> and <code>collapse</code>. The <code>collapse</code> value behaves differently for different elements. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility" target="blank">MDN</a> for details.
+<blockquote>Note: What’s the difference between <code>display: none</code> and <code>visibility: hidden</code>? An element with <code>display: none</code> will be completely removed from the web page. An element with <code>visibility: hidden</code>, however, will not be visible on the web page, but the space reserved for it will.</blockquote>[Codecademy]
+            </p>
+          <h3 id="review">16 of 16 Review</h3>
+            <p>
+        No more stuff to add here ...
+            <p>
+              Note: There are many more options and permutations, including 'shorthands' than are covered here. See the MDN<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model" target="blank"> 'The box model' </a>article.
+            </p>
+            </p>
+<!-- Code Stuff 
+          <p>E.g. the following code
+            <pre>
+    p {
+        color: green;
+      }
+            </pre>
+          will set the text colour for all paragraphs (the <code>&ltp&gt</code> elements in the html) to the colour green. </p>
+                -->
+        </article>
+        <aside>
+			<h2>Aside</h2>
+          <p>
+			... some asid-ey type stuff ...
+			</p> 
+        </aside>
+      </section> 
+      <!--
+      <section id="media">
+		    <figure>
+          <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+          <figcaption>A cute dog (for no reason other than this is a place-holder).</figcaption>
+        </figure>  
+      
+	      <audio controls>
+    	    <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+        </audio> 
+        <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+        </video>
+	      <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+      </section>
+        -->
+    </main>
+    
+    <footer>
+      <p>Contact me at +1 234 567 8910 </p>
+    </footer>
+  </body>
+</html>

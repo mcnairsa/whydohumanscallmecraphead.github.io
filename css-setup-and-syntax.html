@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>CSS Setup and Syntax</h1>
+      <nav>
+		    <h2>Navigation</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <h3>Exercises</h3>
+              <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#anatomy">CSS Anatomy</a></li>
+                <li><a href="#inline">CSS Inline Styles</a></li>
+                <li><a href="#internal">CSS Internal Stylesheet</a></li>
+                <li><a href="#external">CSS External Stylesheet</a></li>
+                <li><a href="#linking">CSS Linking the External Stylesheet</a></li>
+                <li><a href="#review">Review</a></li>
+              </ol>
+          </li>
+      </ul>
+     </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Exercises</h2>
+        <article>
+          <h3 id="introduction">1 of 7 Introduction</h3>
+            <p>
+            CSS gives the developer control over the styling of otherwise plain html. It controls, inter alia, colours, fonts and position of elements on the page. 
+            </p>
+          <h3 id="anatomy">2 of 7 CSS Anatomy</h3>
+          <p>
+          Two ways to use CSS are:<ul><li><em>inline styles</em> that are inline with their associated elements and</li><li> <em>rulesets</em> that are separate from the html elements being styled.</li> </ul>
+          [For code examples see following sections.]
+          </p>
+          <h3 id="inline">3 of 7 CSS Inline Styles</h3>
+            <p>
+              CSS can be inserted directly into an html element thus:            
+                <pre>        &ltp style="color: red;"&gtI'm learning to code!&lt&#47&gt</pre>
+                This will be rendered by the browser thus:
+                <p style='color: red;'>I'm learning to code!</p>
+              Note that inline styles are rarely used in practice ... carry on reading for the right way to do things.
+            </p>
+            <h3 id="internal">4 of 7 CSS Internal Stylesheet</h3>
+            <p>
+              We can add stylesheets internally within the <code>&lthead&gt</code> element of an html file.
+              <pre>
+              &lthead&gt>
+                &ltstyle&gt
+                p {
+                  color: green;
+                }
+                &lt&#47style&gt
+              &lt&#47head&gt
+              </pre>
+            </p>
+            <h3 id="external">5 of 7 CSS External Stylesheet</h3>
+            <p>Or we can put the CSS in a separate file.<br>
+            The stylesheet itself will look something like this.</p>
+              <pre>
+              p {
+                color: green;
+              }
+                </pre>
+            </p>
+            <h3 id="linking">6 of 7 CSS Linking the External Stylesheet</h3>
+            <p>
+              We use the <code>&ltlink&gt </code> html element to link to our css file from our html file. Like this:
+          <pre>
+              &lthead&gt
+                &ltlink href="./style.css&gt rel="stylesheet" &#47&gt
+              &lt&#47head&gt
+            </pre>
+            Note: the <code>rel="./ ... "</code> path is used when we link to a css file in the same directory [folder] as the html file. This is called a <em>relative path</em>. If the stylesheet is elsewhere on the web we must use the full or <em>absolute</em> path.<br>
+            Note: the <code>rel="stylesheet"</code> attribute is required so that the browser knows it's a stylesheet.
+            </p>
+            <h3 id="review">7 of 7 Review</h3>
+            <p>Seriously? Haven't you had enough? If you <em>really</em> want a review go look at the lesson.</p>
+            <p>We use external stylesheets, often a single file, in preference to internal stylesheets (a) so that we have a proper <em>separation of concerns </em> and (b) so that we do not have to find all the internal stylesheets, perhaps a large number of them contained in all our html files. This means we have to change the code once and do not risk missing any.</p>
+          </article>
+        <aside>
+			    <h2>Aside</h2>
+         <p>
+			Note: to insert code snippets into the page you have to <em>escape</em> the '<', '/' and '>' characters by using html special characters. When I've worked out how to unescape the escape characers I'll insert them here.
+      Note: using the <code>&ltpre&gt</code> html element will cause most browsers to use a monospaced font and to respect whitespace in the code snippet.<br>
+      Note: the <code>&ltcode&gt</code> html element is similar to <code>&ltpre&gt</code> but does not respect whitespace. I renders in monospace font but does not format the code with newlines and indents.
+			  </p> 
+        </aside>
+      </section> 
+      <!-- <figure>
+        <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+        <figcaption>A cute dog (for no reason other than this is a place-holder).</figcaption>
+      </figure>
+      -->
+      <!--
+	<audio controls>
+    	<source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+    </audio> 
+    <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+    </video>
+	<embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif"/>
+	-->
+    </main>
+    
+    <footer>
+      <p>Contact me at +1 234 567 8910 </p>
+    </footer>
+  </body>
+</html>

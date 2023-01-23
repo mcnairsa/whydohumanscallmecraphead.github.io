@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./resources/css/index.css" rel="stylesheet" type="text/css">
+	<title>FSE - Hosting and Domains</title>
+  </head>
+  <body>
+	<h1>Notes on <a href="codecademy.com">Code Academy</a> Full Stack Engineer Path</h1>
+	<h2>Module: Hosting and Domains</h2>
+    <p>Note: as of (I think) the last page of notes I am no longer doing this point/lesson by point/lesson. Instead I am working up notes across the module on the things that are salient. Particularly, I am making notes on the things I don't know already.</p>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#hosting">Hosting</a></li>
+      <li><a href="#domains">Domains</a></li>
+	  <li><a href="#ghp">GitHub Pages</a></li>
+	  <li><a href="#next">Next</a></li>
+    </ul>
+    <article>
+		<h3 id="hosting">Hosting is...</h3>
+		<p> ...	providing a home for your killer app. If you want the world to know about your killer app but don't want to give the world access your computer (and you really <em>don't</em> want to do that) then you need to find a home for it with a 'hosting provider'. There are different types of hosting service.
+			<ul>
+				<li><em>Shared</em> hosting: like sharing a flat ['appartment'] which is OK till your flatmate has a bunch of friends round and they're up partying all night when you have work the next day. Other users can gobble up resources on the host machine or  <em>server</em>. Your users' experience of your site will suffer as a result.</li>
+				<li><em>Dedicated</em> hosting: you have no flatmates to worry about but you pay all the rent and bills. Generally more expensive but you have more contol over the server.</li>
+				<li><em>Cloud</em> hosting: more like a hotel or renting a room through AirBnB: you pick what space you need and what facilities you need. this can vary from a room with a bed and you bring your own bed linen to a fully serviced room where you can just turn up and get your head down. There are different models of cloud computing including:
+				  <ul>
+					<li><em>Infrastructure as a Service (IaaS)</em>: you get the barebones of the hardware but have control over things like what o/s and dbms it runs.</li>
+					<li><em>Platform as a Service (PaaS)</em>: the cloud provider takes responsibility for configuration and provides everything you need to run your application.</li>
+					<li><em>Function as a Service (FaaS)</em>: breaks the application down into its separate function and runs them in response to events. FaaS is itself a form of <em>serverless</em> computing.</li>
+				  </ul>
+				</li>
+			</ul>
+            <ul><h3>Suggestions/Recommendations:</h3>
+				<li><em>GitHub Pages:</em> works well for static sites</li>
+				<li><em>Heroku:</em> a PaaS more suited to full-stack applications great for proof-of concept or quick demos; gets expensive if trying to run anything production ready.</li>
+				<li><em>Digital Ocean:</em> is a cloud provider. Their range of <em>virtual private server (VPS)</em> options gives you the choice of pre-built solutions including bloging and e-commerce or you can install your own stack and applications from thro/s upwards. </li>
+			</ul>
+		</p>
+		<h3 id="domains">A Domain is ...</h3>
+		<p> ... the name for a location on the internet.
+			Computers use numbers in the form of ip (=<em>I</em>nternet <em>P</em>rotocol) address such as 12.34.56.78 to communicate over the internet. 'The Domain Name System (<strong>DNS</strong>) is the phonebook of the internet.' [cloudflare.com]
+		    <ul>
+				<li><em>DNS searches</em>: first the local cache is searched to see if the resource is already known. If not then a chain of searches takes place that ultimately results in an ip address being returned to the application on your computer that wants to communicate over the 'net.</li>
+                <li><em>Structure of a domain</em> your domain consists of a name you choose like the name of your town, business or blog (the bit before the DOT) plus <strong>top level domains</strong> (TLDs) such as .com or .org.</li>
+			</ul>
+		</p>
+		<h3 id="ghp">GitHub Pages ...</h3>
+			<p> ...	is a hosting service available to anyone with a GitHub account. It is ideal for any kind of static site such a project documentation or a simple blog. <br>
+				It can be used to host html and css and compiled ReactJS apps. Pages can also be written in Markdown. <br>
+				Pages can be uploaded by git or by drag and drop from your local file browser in to the GHP page in your [web]browser.
+		    </p>
+    	<h3 id="next">coming soon to a site near you ...</h3>
+			<p> Let's actually get this live with GHP ...
+		    </p>
+    <!--<p>This is one of my favorite websites: <a href="https://www.duckduckgo.com/" target="_blank">DuckDuckGo</a></p> -->
+  </body>
+</html>

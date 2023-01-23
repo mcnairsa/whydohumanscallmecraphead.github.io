@@ -1,0 +1,14 @@
+
+/* Some of these colors (sic) taken from https://html-color.codes/green */
+* {
+	/* color: #a3c1ad; /*Cambridge Blue #a3c1ad | rgb(163,193,173) */
+	/* color: #d0db61; /* Chinese Green #d0db61 | rgb(208,219,97) */
+    /* color: #d8e4bc; /* Gin	#d8e4bc | rgb(216,228,188)*/
+	/* color: aliceblue; */
+	color: antiquewhite;
+	/* background-color: #306030; /* Mughal Green #306030 | rgb(48,96,48) */
+	/* background-color: #123524; /* Phthalo Green #123524 | rgb(18,53,36) */
+	/* background-color: #004225; /* British Racing Green	#004225 | rgb(0,66,37) */
+	/* background-color: darkgreen; */
+	background-color: darkslategray;
+}
